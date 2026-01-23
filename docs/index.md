@@ -8,7 +8,7 @@ This challenge is an official challenge track of the
 
 ## 🔹 Quick Start
 
-- 📄 **Challenge Description (PDF):** [Download](../assets/ICME_challenge.pdf)
+- 📄 **Challenge Description (PDF):** [Download the Challenge Description (PDF)](../assets/ICME_challenge.pdf)
 - 📝 **Registration Form:** https://forms.gle/eFQW3FXuPB8bVjWX9
 - 💻 **Code, Tools, Datasets (GitCode Repository):** https://gitcode.com/your-username/your-repo-name
 - 📦 **Download Code (ZIP from GitCode):** https://gitcode.com/your-username/your-repo-name/archive/refs/heads/main.zip
@@ -34,7 +34,7 @@ Each participant or team may **choose to participate in only one sub-challenge**
 Submissions across multiple sub-challenges are not allowed.
 
 📄 Full technical details are available in the challenge description PDF:  
-👉 [Download the Challenge Description](../assets/ICME_challenge.pdf)
+👉 [Download the Challenge Description (PDF)](../assets/ICME_challenge.pdf)
 
 ---
 
