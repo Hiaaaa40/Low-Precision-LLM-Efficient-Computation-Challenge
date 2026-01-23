@@ -10,20 +10,18 @@ This challenge is an official challenge track of the
 
 ## 🔹 Quick Start
 
+- 💻 **Complete Project Repository (GitCode):**  
+  [Low-precision LLM Efficient Computation Challenge – GitCode](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge)
+
 - 📄 **Challenge Description (PDF):**  
   [Download the Challenge Description (PDF)](assets/ICME_challenge_2026-01-23.pdf)
 
 - 📝 **Registration Form:**  
   [Register for the Challenge](https://forms.gle/eFQW3FXuPB8bVjWX9)
 
-- 💻 **Complete Project Repository (GitCode):**  
-  [Low-precision LLM Efficient Computation Challenge – GitCode](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge)
-
 - 🧰 **Code, Tools, and Datasets:**  
   [Browse Code and Resources on GitCode](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge)
 
-- 📦 **Download Baseline Code (ZIP):**  
-  [Download Baseline ZIP](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge/archive/refs/heads/main.zip)
 
 ---
 
