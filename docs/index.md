@@ -91,10 +91,10 @@ For registration inquiries:
 
 | Phase | Description | Date |
 |------|-------------|------|
-| Registration | Challenge registration period | Jan 30, 2026 – Mar 10, 2026 |
-| Submission | Result submission window | Feb 10, 2026 – Mar 15, 2026 |
-| Review | Review & reproducibility verification | Mar 16, 2026 – Mar 29, 2026 |
-| Announcement | Final results announcement | Mar 30, 2026 |
+| Registration | Challenge registration period | Feb 10, 2026 – Apr 10, 2026 |
+| Submission | Result submission window | Mar 15, 2026 – Apr 30, 2026 |
+| Review | Review & reproducibility verification | May 1, 2026 – May 12, 2026 |
+| Announcement | Final results announcement | **May 15, 2026** |
 
 ---
 
