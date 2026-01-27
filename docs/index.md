@@ -150,5 +150,5 @@ The award announcement schedule follows the timeline specified in **5. Important
 
 ---
 
-*Note: This challenge is jointly released by **Tsinghua University**. Baseline code, simulation tools, datasets, and evaluation
+*Note: This challenge is jointly released by **Global Computing Consortium  (GCC)** and **Dr. Wenbo Ding from Tsinghua University**. Baseline code, simulation tools, datasets, and evaluation
 scripts will be released in stages. Please watch the GitCode repository for updates.*
