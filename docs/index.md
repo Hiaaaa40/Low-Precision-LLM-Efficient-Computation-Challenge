@@ -8,18 +8,12 @@ This challenge is an official challenge track of the
 
 ---
 
-> **Latest release:** v1.2 (2026-01-26)  
-> If you are seeing an older version, please hard refresh the page (Ctrl/Cmd + Shift + R).
-> <!-- rebuild -->
----
+
 
 ## 🔹 Quick Start
 
 - 💻 **Complete Project Repository (GitCode):**  
   [Low-precision LLM Efficient Computation Challenge – GitCode](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge)
-
-- 📄 **Challenge Description (PDF):**  
-  [Download the Challenge Description (PDF)](assets/ICME_challenge_2026-01-23.pdf)
 
 - 📝 **Registration Form:**  
   [Register for the Challenge](https://forms.gle/eFQW3FXuPB8bVjWX9)
@@ -27,26 +21,83 @@ This challenge is an official challenge track of the
 
 ---
 
-## 1. Challenge Background
+## 1. Challenge Description
 
-With the rapid growth of large-scale language and multimodal models,
-computational cost and energy efficiency have become major bottlenecks.
-Low-precision numerical formats such as **HiFloat8, HiFloat4, and MXFP4** offer promising opportunities to significantly reduce memory footprint
-and computation cost while maintaining model accuracy.
+## Challenge Details
 
-This challenge aims to promote **algorithmic and system-level innovations**
-in low-precision training and inference for large models, with a strong
-emphasis on **reproducibility** and **practical deployment**.
+The challenge centers on **Text-to-Image** and **Text-to-Video** generation tasks. This challenge establishes two primary research directions focusing on low-precision computation for large-scale models.
 
-The challenge consists of **two independent sub-challenges**:
-- **Sub-Challenge 1: W4A4 Quantization for Inference**
-- **Sub-Challenge 2: W8A8 Quantization for Training**
+**Direction A – Quantization-Aware Training (QAT).**  
+Participants are required to use specified public datasets and pre-trained models to perform quantization-aware fine-tuning using the **HiFloat8 (HiF8)** numerical format. The objective is to optimize model accuracy on downstream tasks while reducing training and computation costs.
 
-Each participant or team may **choose to participate in only one sub-challenge**.
-Submissions across multiple sub-challenges are not allowed.
+**Direction B – Post-Training Quantization (PTQ).**  
+Participants are required to apply inference-time quantization directly to pre-trained models to achieve model compression and acceleration. Low-precision formats such as **HiFloat4 (HiF4)** or **MXFP4** are used in this direction.
 
-📄 Full technical details are available in the challenge description PDF:  
-👉 [Download the Challenge Description (PDF)](assets/ICME_challenge_2026-01-23.pdf)
+Based on these two research directions, **two sub-challenges** are set up. Each sub-challenge adheres to the unified principles stipulated in the *Evaluation Criteria* section.  
+Each participant may **choose only one sub-challenge** to participate in.
+
+---
+
+### Sub-Challenge A: W4A4 Quantization for Inference (HiF4 / MXFP4)
+
+Large model inference faces significant deployment costs, which often constrain large-scale application. Quantizing the weights and activations of linear layers can effectively reduce weight movement overhead and leverage low-precision computational capabilities to enhance inference performance.
+
+This sub-challenge focuses on **4-bit weight and activation quantization (W4A4)**, restricted to either the **HiF4** or **MXFP4** numerical format. Participants are required to develop and apply quantization strategies to the open-source, state-of-the-art multimodal generative model **Wan 2.2**.
+
+The evaluation will utilize the **OpenS2V-5M** dataset and associated **VBench** metrics, which focus on subject-to-video generation fidelity and temporal consistency.
+
+Participants are permitted to protect a limited number of Transformer blocks in **BF16** precision:
+- A maximum of **5 layers** for MXFP4
+- A maximum of **2 layers** for HiF4
+
+#### Mini-Challenge for W4A4 Quantization
+
+To promote and encourage research into ultra-low precision data formats for quantization, a **Mini-Challenge** is established under this sub-challenge. This track will **not be formally ranked** against the main competition leaderboards. However, submissions to this track will be collectively eligible for consideration in the **Innovation Award** category.
+
+The reference model for this Mini-Challenge is **Pangu-72B-2512**. Evaluation is conducted on standard downstream task datasets, using the **mean absolute percentage precision loss** as the final metric.
+
+The objective is to achieve a **W4A4 inference average precision loss that is no more than 1% lower than the BF16 baseline** on the following datasets:
+- SuperGPQA  
+- IF-Eval  
+- AIME2025  
+- LiveCodeBench V6  
+- BFCL-V3  
+
+Only submissions that satisfy this objective will qualify for evaluation for the Innovation Award.
+
+---
+
+### Sub-Challenge B: W8A8 Quantization for Training (HiF8)
+
+Large model training incurs high computational costs and long iteration cycles, which limit rapid development and experimentation. Quantizing the weights and activations of linear layers, and utilizing low-precision formats within attention layers, can effectively reduce data movement costs and accelerate training through low-precision computation.
+
+This sub-challenge focuses on **8-bit weight and activation quantization (W8A8)**, as well as attention quantization, strictly limited to the **HiFloat8 (HiF8)** numerical format. The test model for this task is **Wan2.1 T2V-1.3B**.
+
+Participants are encouraged to employ **delayed scaling strategies** wherever possible to further minimize quantization overhead and accelerate training.
+
+The training methodology will be evaluated based on the video generation quality of the post-training model using the **BestWishYsh** dataset. The **VBench** evaluation metric will be used, with a target **precision loss of less than 0.5%**.
+
+Participants are allowed to keep a limited number of Transformer blocks in high precision, with up to **5 layers** retained during HiFloat8 training.
+
+#### Mini-Challenge for W8A8 Quantization
+
+A Mini-Challenge is also established under this sub-challenge to encourage further exploration of low-precision training methodologies. This track will **not be formally ranked** on the main competition leaderboard, but eligible submissions will be considered for the **Innovation Award**.
+
+The test model for this Mini-Challenge is **OpenPangu1B**. Participants are encouraged to employ delayed scaling strategies to reduce quantization overhead and accelerate training.
+
+Evaluation will be conducted on a set of language model benchmarks, including but not limited to:
+- MMLU  
+- GSM8K  
+- MATH500  
+- HellaSwag  
+- ARC  
+- PIQA  
+
+The target objectives are:
+- Training loss **less than 0.5%**
+- Precision loss **less than 1.0%**
+
+Only submissions that satisfy both objectives will qualify for evaluation for the Innovation Award.
 
 ---
 
@@ -60,30 +111,83 @@ For registration inquiries:
 
 ---
 
-## 3. Sub-Challenges
 
-### Sub-Challenge 1: W4A4 Quantization for Inference
-- Supported formats: **HiFloat4 / MXFP4**
-- Reference model: **Qwen3-32B**
-- Requirement: average accuracy degradation < **0.5%** compared with FP16
+## 3. Evaluation Criteria
 
-### Sub-Challenge 2: W8A8 Quantization for Training
-- Supported format: **HiFloat8**
-- Test model: **Wan2.1**
-- Requirement: accuracy degradation < **0.5%**
+All submissions will be evaluated based on the following primary criteria, totaling **100%**.  
+The evaluation is divided into two main categories: **Objective Evaluation** and **Subjective Evaluation**.
 
----
 
-## 4. Evaluation Metrics
+### I. Objective Evaluation (70% of total score)
 
-**Objective (60%)**
-- Loss (30%)
-- Inception model / FID (30%)
+This section utilizes quantitative metrics to measure model performance.  
+The final score is calculated based on comparative rankings. The score of objective evaluation is based on the **percentile ranking** in the following components.
 
-**Subjective (40%)**
-- University volunteer scoring (40%)
-  - Authenticity (20%)
-  - Clarity (20%)
+#### 1. Baseline Requirement
+
+This metric measures the discrepancy or degree of loss between the model output and the target data. A lower loss indicates superior and more accurate model performance.
+
+**Requirement:**
+
+- **Sub1**
+  - The average loss in VBench accuracy metrics, when comparing the full-precision baseline model to the **MXFP4** quantized model, must be **less than 1%**.
+  - The average loss in VBench accuracy metrics, when comparing the full-precision baseline model to the **HiF4** quantized model, must be **less than 0.5%**.
+
+- **Sub2**
+  - Precision loss of **less than 0.5%**.
+
+Only submissions meeting this baseline requirement will proceed to the ranking phase.
+
+
+
+#### 2. Quality & Diversity Metrics: VBench (50%)
+
+- **VBench**:  
+  A comprehensive benchmark for video generation performance.
+
+
+
+#### 3. Quantitative Proportions (20%)
+
+- Refers to the score derived from quantified performance rankings across specified benchmarks.
+
+<img width="376" height="330" alt="image" src="https://github.com/user-attachments/assets/2334a1f9-f5a8-4d30-b0fc-bff1fbefea87" />
+
+
+
+
+### II. Subjective Evaluation (30% of total score)
+
+This section involves perceptual quality scoring by a panel of human judges, consisting of technical experts and university student volunteers.
+
+#### 1. Realism and Clarity (20%)
+
+- **Judges:**  
+  University student volunteers.
+
+- **Criteria:**  
+  Volunteers will evaluate the visual realism of the generated content. The review will determine the extent to which the images or videos appear to be authentic captures rather than synthetic or AI-generated, based on semantic consistency, image quality, and dynamism.
+
+
+
+#### 2. Innovation (10%)
+
+- **Judges:**  
+  Technical experts.
+
+- **Criteria:**
+
+  - **Algorithmic Originality (Weight: 40%)**  
+    Evaluates the degree of innovation in the quantization methodology, focusing on whether novel concepts are introduced or substantial improvements are made to existing methods.
+
+  - **HiFloat-Native Exploration (Weight: 30%)**  
+    Examines whether the solution deeply leverages the unique characteristics of the HiFloat data format and includes quantization algorithms or computational workflows highly optimized for it.
+
+  - **Generalizability (Weight: 20%)**  
+    Assesses the transferability of the solution and its potential applicability to alternative model architectures or diverse task scenarios.
+
+  - **Engineering Value (Weight: 10%)**  
+    Focuses on code quality and standardization, reproducibility, and the ease of practical deployment.
 
 ---
 
@@ -121,26 +225,24 @@ will be maintained in the **GitCode repository**:
 
 ## 8. Awards
 
-The challenge includes **two independent sub-challenges**, each evaluated separately.  
-For **each sub-challenge**, the following awards will be granted:
+Awards are established for this challenge to recognize both overall performance and technical innovation.
 
-- **First Prize**
-- **Second Prize**
-- **Third Prize**
+The **First, Second, and Third Prizes** are awarded **separately for each sub-challenge**, based on the **total evaluation score** within that sub-challenge.  
+The **Innovation Awards** are evaluated **across all sub-challenges**, including Mini-Challenge submissions, and are judged solely on originality and breakthrough.
 
-Each team may participate in **only one sub-challenge**.  
-Teams submitting to multiple sub-challenges will be **disqualified from all rankings and awards**.
+- **First Prize (Each Sub-Challenge):**  
+  **$3,000** — Top 1 participant in each sub-challenge
 
-In addition to the ranked prizes, the organizing committee will also present the following **special awards**:
+- **Second Prize (Each Sub-Challenge):**  
+  **$2,000** — Top 2 participant in each sub-challenge
 
-- **Technical Innovation Award**
-- **Engineering Excellence Award**
-- **Application Potential Award**
-- **Judges’ Special Award**
+- **Third Prize (Each Sub-Challenge):**  
+  **$1,000** — Top 3 participant in each sub-challenge
 
-All award-winning submissions are required to **publicly release their source code and related technical materials** as a condition for receiving any award.
-
-The award announcement schedule follows the timeline specified in **5. Important Dates**.
+- **Innovation Awards (Four places, cross-track):**  
+  **$800** per award  
+  Evaluated exclusively based on the **Innovation** criterion  
+  *(Eligible submissions include all main-track and Mini-Challenge entries)*
 
 ---
 
@@ -150,5 +252,13 @@ The award announcement schedule follows the timeline specified in **5. Important
 
 ---
 
-*Note: This challenge is jointly released by **Global Computing Consortium  (GCC)** and **Dr. Wenbo Ding from Tsinghua University**. Baseline code, simulation tools, datasets, and evaluation
+## 10. Organizers
+
+- **Qianlin Zhang from Global Computing Consortium (GCC)**
+
+- **Dr. Wenbo Ding from Tsinghua University**
+
+---
+
+*Note: Baseline code, simulation tools, datasets, and evaluation
 scripts will be released in stages. Please watch the GitCode repository for updates.*
