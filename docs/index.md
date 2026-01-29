@@ -151,10 +151,18 @@ Only submissions meeting this baseline requirement will proceed to the ranking p
 
 - Refers to the score derived from quantified performance rankings across specified benchmarks.
 
-<img width="376" height="330" alt="image" src="https://github.com/user-attachments/assets/2334a1f9-f5a8-4d30-b0fc-bff1fbefea87" />
+
+| Percentile Rank | Core Quality Score (Weight: 50%) | Quantitative Ratio Score (Weight: 20%) |
+|-----------------|----------------------------------|----------------------------------------|
+| Top 10%         | 50                               | 20                                     |
+| Top 11% – 25%   | 45                               | 18                                     |
+| Top 26% – 50%   | 35                               | 14                                     |
+| Top 51% – 75%   | 20                               | 8                                      |
+| Bottom 25%      | 10                               | 4                                      |
+| Unqualified     | 0                                | 0                                      |
 
 
-
+---
 
 ### II. Subjective Evaluation (30% of total score)
 
