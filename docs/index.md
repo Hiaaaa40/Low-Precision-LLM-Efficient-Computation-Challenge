@@ -72,7 +72,7 @@ Large model training incurs high computational costs and long iteration cycles, 
 
 This sub-challenge focuses on **8-bit weight and activation quantization (W8A8)**, as well as attention quantization, strictly limited to the **HiFloat8 (HiF8)** numerical format. The test model for this task is **Wan2.1 T2V-1.3B**.
 
-Participants are encouraged to employ **delayed scaling strategies** wherever possible to further minimize quantization overhead and accelerate training.
+Participants are encouraged to employ **delayed scaling strategies**[2] wherever possible to further minimize quantization overhead and accelerate training.
 
 The training methodology will be evaluated based on the video generation quality of the post-training model using the **BestWishYsh** dataset. The **VBench** evaluation metric will be used, with a target **precision loss of less than 0.5%**.
 
@@ -98,17 +98,8 @@ The target objectives are:
 
 **Only submissions that satisfy both objectives will qualify for evaluation for the Innovation Award.**
 
----
 
-### References
 
-[1] Luo Y., Zhang Z., Wu R., et al.  
-**Ascend HiFloat8 Format for Deep Learning.**  
-*arXiv preprint*, arXiv:2409.16626, 2024.
-
-[2] Peng H., Wu K., Wei Y., et al.  
-**FP8-LM: Training FP8 Large Language Models.**  
-*arXiv preprint*, arXiv:2310.18313, 2023.
 
 ---
 
@@ -278,6 +269,16 @@ The **Innovation Awards** are evaluated **across all sub-challenges**, including
 - **Dr. Wenbo Ding from Tsinghua University**
 
 ---
+
+### References
+
+[1] Luo Y., Zhang Z., Wu R., et al.  
+**Ascend HiFloat8 Format for Deep Learning.**  
+*arXiv preprint*, arXiv:2409.16626, 2024.
+
+[2] Peng H., Wu K., Wei Y., et al.  
+**FP8-LM: Training FP8 Large Language Models.**  
+*arXiv preprint*, arXiv:2310.18313, 2023.
 
 *Note: Baseline code, simulation tools, datasets, and evaluation
 scripts will be released in stages. Please watch the GitCode repository for updates.*
