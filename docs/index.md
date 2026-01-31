@@ -1,4 +1,3 @@
-
 # The IEEE International Conference on Multimedia & Expo (ICME) 2026 Low-Precision Large Language Model Efficient Computation Challenge
 
 This challenge is an official challenge track of the  
@@ -20,6 +19,7 @@ This challenge is an official challenge track of the
 
 
 ---
+
 
 ## 1. Challenge Description
 
