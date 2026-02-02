@@ -206,7 +206,7 @@ This section involves perceptual quality scoring by a panel of human judges, con
 
 ---
 
-## 5. Important Dates
+## 4. Important Dates
 
 | Phase | Description | Date |
 |------|-------------|------|
@@ -217,7 +217,7 @@ This section involves perceptual quality scoring by a panel of human judges, con
 
 ---
 
-## 6. Submission
+## 5. Submission
 
 📧 **Submission Email:**  zhaoy21@tsinghua.org.cn
 
@@ -237,7 +237,7 @@ Each submission must be sent as a single archive (`.zip` / `.tar.gz`) and includ
 
 ---
 
-## 7. Code, Tools, and Datasets
+## 6. Code, Tools, and Datasets
 
 All engineering materials (baseline code, simulation tools, datasets, evaluation scripts)
 will be maintained in the **GitCode repository**:
@@ -246,7 +246,7 @@ will be maintained in the **GitCode repository**:
 
 ---
 
-## 8. Awards
+## 7. Awards
 
 Awards are established for this challenge to recognize both overall performance and technical innovation.
 
@@ -278,13 +278,13 @@ The **Innovation Awards** are evaluated **across all sub-challenges**, including
 
 ---
 
-## 9. Official Contact
+## 8. Official Contact
 
 📧 zhaoy21@tsinghua.org.cn
 
 ---
 
-## 10. Organizers
+## 9. Organizers
 
 - **Qianlin Zhang from Global Computing Consortium (GCC)**
 
