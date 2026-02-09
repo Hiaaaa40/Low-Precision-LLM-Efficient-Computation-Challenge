@@ -18,6 +18,7 @@ This challenge is an official challenge track of the
 
 - 📝 **Registration Form:**  
   [Register for the Challenge](https://forms.gle/eFQW3FXuPB8bVjWX9)
+
   [Alternative Registration Form](https://wj.qq.com/s2/25735334/aa1d/) (**Only use this link when you have trouble opening the first registration link.**)
 
 
