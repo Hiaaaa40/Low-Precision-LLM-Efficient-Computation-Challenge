@@ -1,4 +1,4 @@
-# The IEEE International Conference on Multimedia & Expo (ICME) 2026 Low-Precision Large Language Model Efficient Computation Challenge
+# The IEEE International Conference on Multimedia & Expo (ICME) 2026 Large Language Model Low-Precision Efficient Computation Challenge
 
 This challenge is an official challenge track of the  
 **IEEE International Conference on Multimedia & Expo (ICME) 2026**.
@@ -14,7 +14,7 @@ This challenge is an official challenge track of the
 ## 🔹 Quick Start
 
 - 💻 **Complete Project Repository (GitCode):**  
-  Low-precision LLM Efficient Computation Challenge – GitCode (Will add link to the repository of the dataset)
+  [Low-precision LLM Efficient Computation Challenge – GitCode](https://gitcode.com/GCC-GlobalComputingConsortium/Low-precision_Large_Language_Model_Efficient_Computation_Challenge)
 
 - 📝 **Registration Form:**  
   [Register for the Challenge](https://forms.gle/eFQW3FXuPB8bVjWX9)
@@ -107,7 +107,7 @@ The target objectives are:
 ## 2. Participation and Registration
 
 🔗 **Registration Form:**  
-https://forms.gle/eFQW3FXuPB8bVjWX9
+[Register for the Challenge](https://forms.gle/eFQW3FXuPB8bVjWX9)
 
 For registration inquiries:  
 📧 zhaoy21@tsinghua.org.cn
@@ -242,10 +242,16 @@ Each submission must be sent as a single archive (`.zip` / `.tar.gz`) and includ
 
 ## 6. Code, Tools, and Datasets
 
-All engineering materials (baseline code, simulation tools, datasets, evaluation scripts)
-will be maintained in the **GitCode repository**:
+The **HiFloat8 (HiF8) simulation toolkit** used in this challenge has been officially released.
 
-👉 https://gitcode.com/your-username/your-repo-name
+Participants are required to download and use the HiF8 simulation tools from the following repository:
+
+👉 **[HiFloat8 Simulation Toolkit (GitHub)](https://github.com/global-computing-consortium/HiFloat8)**
+
+Detailed deployment instructions, environment configuration, and usage examples are provided in the **README** file of the repository.
+
+Please note that the simulation tools for **Sub-Challenge 1 (HiF4 / MXFP4)** will be released at a later stage.  
+Participants are advised to follow this page for the latest updates.
 
 ---
 
