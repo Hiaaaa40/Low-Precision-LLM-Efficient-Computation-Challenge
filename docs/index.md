@@ -1,4 +1,4 @@
-# The IEEE International Conference on Multimedia & Expo (ICME) 2026 Large Model Low-Precision Quantization Challenge
+# The IEEE International Conference on Multimedia & Expo (ICME) 2026 Large Model Low-Precision Quantization Challenge（Large Model Low Bit-width Format Quantization Challenge）
 
 This challenge is an official challenge track of the  
 **IEEE International Conference on Multimedia & Expo (ICME) 2026**.
