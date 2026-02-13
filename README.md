@@ -1,1 +1,1 @@
-# Low-Precision-LLM-Efficient-Computation-Challenge
+# Low Bit-width Large Model Quantization Challenge
